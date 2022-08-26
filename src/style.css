@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  section {
+    @apply mt-5 p-2;
+  }
+
+  section h2 {
+    @apply mb-2 text-purple-700 font-semibold text-2xl uppercase;
+  }
+}
+
+@layer components {
+  .section {
+    @apply p-2 bg-white rounded-xl drop-shadow-md;
+  }
+  .box {
+    @apply p-3 bg-white rounded-xl drop-shadow-md;
+  }
+  /* Quotes Side-by-Side */
+  .quote-container {
+    @apply p-2 flex flex-row drop-shadow-md rounded-xl bg-white;
+  }
+  .quote-items {
+    @apply m-3 p-6 bg-blue-100 rounded-xl;
+  }
+  .quote-items p {
+    @apply font-serif text-lg text-gray-700 leading-snug mb-1;
+  }
+  .quote-items span {
+    @apply text-sm text-gray-500;
+  }
+
+  /* Tabs Spaced Out */
+  .nav-tab {
+    @apply flex font-sans p-2 bg-white rounded-full;
+  }
+  .nav-tab a {
+    @apply cursor-pointer text-gray-700 px-6 py-2 rounded-full bg-blue-50 hover:bg-blue-500 hover:text-white;
+  }
+  .nav-tab a.current {
+    @apply bg-blue-500 text-white;
+  }
+
+  /* Card with Previous & Next Links */
+  .card {
+    @apply bg-white p-9 rounded-lg max-w-xs;
+  }
+  .card h1 {
+    @apply text-4xl font-bold text-blue-600;
+  }
+  .card p {
+    @apply mt-4;
+  }
+  .card .links {
+    @apply mt-4 flex justify-between;
+  }
+  .card a {
+    @apply px-4 py-2 rounded-lg text-sm text-gray-900 bg-blue-200;
+  }
+
+  /* Team profiles */
+  .container {
+    @apply bg-white py-5 rounded-lg w-auto max-w-none;
+  }
+
+  .profile {
+    @apply text-center px-6 py-4;
+  }
+  .profile img {
+    @apply w-32 h-32 object-cover object-top drop-shadow-lg rounded-full;
+  }
+  .profile h3 {
+    @apply font-bold text-xl;
+  }
+  .profile p {
+    @apply text-sm text-gray-600;
+  }
+
+  /* Logos wrapped */
+  .logos {
+    @apply mt-4 flex justify-around flex-wrap;
+  }
+  .logos img {
+    @apply h-12 mx-4 mb-2;
+  }
+
+  /* Align Items */
+  .icon-container {
+    @apply container w-fit p-4 align-middle drop-shadow-lg;
+  }
+  .icon {
+    @apply text-pink-600 mr-2;
+  }
+  .icon-text {
+    @apply font-semibold text-base;
+  }
+
+  /* Profile card */
+  .card-profile {
+    @apply card p-4 flex items-center;
+  }
+  .card-profile img {
+    @apply w-20 h-20 object-cover drop-shadow-lg rounded-full mr-3;
+  }
+  .card-profile h3 {
+    @apply text-xl font-bold;
+  }
+  .card-profile p {
+    @apply mt-0 text-base text-gray-700;
+  }
+
+  /* Services section */
+  .service-container {
+    @apply section w-auto max-w-none bg-transparent flex justify-center items-stretch;
+  }
+  .service {
+    @apply max-w-xs mx-5 p-8 bg-white rounded-lg text-center;
+  }
+  .service .icon {
+    @apply inline-block py-2 px-3 text-white bg-teal-500 rounded-full;
+  }
+  .service h3 {
+    @apply text-xl font-bold my-4;
+  }
+  .service p {
+    @apply text-sm;
+  }
+
+  /* Frequent Questions */
+  .question-section {
+    @apply container w-auto max-w-md p-4;
+  }
+  .question-section h2 {
+    @apply text-3xl text-center capitalize italic mb-10;
+  }
+  .question {
+    @apply flex items-start justify-center my-6;
+  }
+  .question > span {
+    @apply block px-3 py-1 text-white text-xl font-bold bg-rose-700 rounded-md mr-4;
+  }
+  .question h4 {
+    @apply font-bold text-lg;
+  }
+  .question p {
+    @apply my-1;
+  }
+
+  /* Buttons */
+  .btn {
+    @apply block w-full py-2 px-4 text-center rounded;
+  }
+  .btn-primary {
+    @apply text-white bg-blue-500 hover:opacity-70;
+  }
+  .btn-primary.outlined {
+    @apply text-blue-500 border border-blue-500 bg-white;
+  }
+
+  /* Alternating list of profiles */
+  .profile-cards {
+    @apply flex flex-col justify-between p-4 max-w-lg bg-white;
+  }
+  .profile-card {
+    @apply flex justify-start items-center even:flex-row-reverse even:text-right;
+  }
+  .profile-card img {
+    @apply h-36 object-cover mx-2;
+    min-width: 9rem;
+  }
+  .profile-card__content {
+    @apply mx-3;
+  }
+  .profile-card__header {
+    @apply text-xl font-bold;
+  }
+  .profile-card__meta {
+    @apply text-sm text-slate-500;
+  }
+  .profile-card__description {
+    @apply mt-4 leading-snug text-gray-700;
+  }
+
+  /* Tabs Hover Effect */
+  .tabs-container {
+    @apply container p-0;
+  }
+  .tabs-container ul {
+    @apply flex justify-between my-8 mx-auto;
+  }
+  .tabs-container ul li {
+    @apply p-5 text-center cursor-pointer border-b-2 border-white hover:border-purple-700 flex-grow hover:flex-grow-[2] transition-all duration-200;
+  }
+
+  /* Flex Basis: Split Screen Display */
+  .screen-container {
+    @apply container h-96 p-0;
+  }
+  .screen {
+    @apply flex flex-col w-full h-full md:flex-row;
+  }
+  .split {
+    @apply flex flex-col basis-1/2 text-center content-center justify-center items-center;
+  }
+  .split h3 {
+    @apply text-4xl font-bold;
+  }
+  .split p {
+    @apply leading-loose;
+  }
+  .split a {
+    @apply mt-5 px-4 py-2 bg-white font-semibold rounded-md cursor-pointer hover:opacity-80 drop-shadow-md;
+  }
+
+  /* Flex Basis: Pricing Plans */
+  .plan {
+    @apply mx-3 p-4 bg-white rounded-lg flex flex-col justify-between min-h-[140px] basis-1/3;
+  }
+  .plan.active {
+    @apply text-white bg-pink-600;
+  }
+  .plan-info h3 {
+    @apply text-xl font-bold;
+  }
+  .plan-type {
+    @apply text-sm;
+  }
+  .plan-price {
+    @apply block text-3xl font-bold;
+  }
+
+  /* Flex Basis: Pricing Plans (better) */
+  .plan-b {
+    @apply basis-0 flex-grow flex-shrink;
+  }
+
+  /* Understanding Flex Concepts */
+  .flex-case {
+    @apply flex flex-col px-3 mb-3;
+  }
+  .flex-case h3 {
+    @apply font-semibold text-2xl text-rose-700;
+  }
+  .flex-case p {
+    @apply text-slate-800;
+  }
+
+  /* Navigation Bars with Centered Menus */
+  .centered-navbar {
+    @apply flex justify-between items-center px-6 py-5 bg-white;
+  }
+  .centered-navbar ul li {
+    @apply inline-block mx-5;
+  }
+  .centered-navbar a.cta {
+    @apply bg-blue-500 text-white py-2 px-5 rounded-full;
+  }
+}
