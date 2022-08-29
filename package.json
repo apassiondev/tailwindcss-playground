@@ -5,6 +5,7 @@
     "css-w": "npx tailwindcss -i ./src/style.css -o ./public/compiled.style.css -w",
     "css-w:2": "npx tailwindcss -i ./src/style2.css -o ./public/compiled.style2.css -w",
     "css-w:3": "npx tailwindcss -i ./src/style3.css -o ./public/compiled.style3.css -w",
+    "css-w:4": "npx tailwindcss -i ./src/fitness.css -o ./public/compiled.fitness.css -w",
     "serve-w": "browser-sync start -c bs.config.js"
   },
   "devDependencies": {

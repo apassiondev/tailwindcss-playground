@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-blue-100 p-0 m-auto;
+  }
+}
+
+@layer components {
+  .wrapper {
+    @apply rounded-xl m-5 md:max-w-3xl mx-auto;
+  }
+  h1 {
+    @apply text-3xl font-bold capitalize py-4;
+  }
+  .report {
+    @apply m-4 p-6 min-w-[12rem] h-[12rem] bg-teal-200 rounded-xl;
+  }
+  .report-body {
+    @apply h-full flex flex-col justify-between items-center text-center;
+  }
+  .report-body > span:nth-child(1) {
+    @apply text-sm;
+  }
+  .report-body > span:nth-child(2) {
+    @apply font-bold text-3xl;
+  }
+}
