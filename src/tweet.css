@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-green-50 text-[0.9rem] text-gray-800;
+  }
+}
+
+@layer components {
+  .tweet {
+    @apply border-box max-w-lg p-3 bg-white drop-shadow-md rounded-md;
+  }
+  .tweet-body {
+    @apply flex;
+  }
+  .tweet-author a {
+    @apply hover:opacity-50;
+  }
+  .tweet-avatar {
+    @apply w-12 h-12 rounded-full;
+  }
+  .tweet-actions {
+    @apply max-w-sm mt-3;
+  }
+  .tweet-actions span,
+  .tweet-actions i {
+    @apply text-[0.8rem] text-gray-500;
+  }
+}
