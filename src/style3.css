@@ -22,10 +22,10 @@
   }
   /* Responvive Flex Card */
   .card {
-    @apply max-w-[24rem] bg-white rounded-xl;
+    @apply max-w-[24rem] md:max-w-3xl bg-white rounded-xl;
   }
   .card img {
-    @apply w-full h-full object-cover rounded-t-xl;
+    @apply w-full h-full object-cover rounded-t-xl md:rounded-none md:rounded-l-xl;
   }
   .card-body,
   .card-footer {

@@ -623,6 +623,12 @@ section{
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+@media (min-width: 768px){
+  .card{
+    max-width: 48rem;
+  }
+}
+
 .card img{
   height: 100%;
   width: 100%;
@@ -630,6 +636,14 @@ section{
   border-top-right-radius: 0.75rem;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+@media (min-width: 768px){
+  .card img{
+    border-radius: 0px;
+    border-top-left-radius: 0.75rem;
+    border-bottom-left-radius: 0.75rem;
+  }
 }
 
 .card-body, 
@@ -1304,6 +1318,10 @@ img.author__avatar{
 
   .md\:flex-auto{
     flex: 1 1 auto;
+  }
+
+  .md\:flex-row{
+    flex-direction: row;
   }
 
   .md\:justify-around{
