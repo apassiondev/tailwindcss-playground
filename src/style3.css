@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-blue-100 font-[Manrope];
+  }
+  section {
+    @apply p-5;
+  }
+}
+
+@layer components {
+  .box {
+    @apply bg-white drop-shadow-md rounded-md;
+  }
+  .box-sm {
+    @apply box max-w-sm;
+  }
+  /* Responvive Flex Card */
+  .card {
+    @apply max-w-[24rem] bg-white rounded-xl;
+  }
+  .card img {
+    @apply w-full h-full object-cover rounded-t-xl;
+  }
+  .card-body,
+  .card-footer {
+    @apply px-6 py-4;
+  }
+  .card__title {
+    @apply text-xl leading-snug font-bold text-gray-600;
+  }
+  .card-body p {
+    @apply mt-3 text-gray-500 text-sm;
+  }
+  .card-footer {
+    @apply leading-none;
+  }
+  img.author__avatar {
+    @apply h-11 w-11 rounded-full;
+  }
+  .author__name {
+    @apply text-xs font-bold text-gray-600;
+  }
+  .author__date {
+    @apply text-xs text-gray-400;
+  }
+  .share-icon {
+    @apply cursor-pointer p-3 bg-gray-200 rounded-full hover:bg-teal-400;
+  }
+}
