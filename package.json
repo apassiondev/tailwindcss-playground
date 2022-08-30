@@ -7,6 +7,7 @@
     "css-w:3": "npx tailwindcss -i ./src/style3.css -o ./public/compiled.style3.css -w",
     "css-w:4": "npx tailwindcss -i ./src/fitness.css -o ./public/compiled.fitness.css -w",
     "css-w:5": "npx tailwindcss -i ./src/tweet.css -o ./public/compiled.tweet.css -w",
+    "css-w:cci": "npx tailwindcss -i ./src/chapter-course-intro.css -o ./public/compiled.chapter-course-intro.css -w",
     "serve-w": "browser-sync start -c bs.config.js"
   },
   "devDependencies": {

@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply p-6 min-h-screen;
+    background: linear-gradient(140deg, #740ba3, #3d1662, #3d1662, #740ba3),
+      center center no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
